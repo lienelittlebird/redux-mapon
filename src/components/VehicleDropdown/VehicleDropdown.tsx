@@ -1,11 +1,11 @@
-// import { useAppSelector } from "../../state/hooks/hooks";
+import { useAppSelector } from "../../state/hooks/hooks";
 
 import "./VehicleDropdown.scss";
 
 interface Props {}
 
 const VehicleDropdown = (props: Props) => {
-  //   const currentCount = useAppSelector((state) => state.counter.value);
+  const currentUnit = useAppSelector((state: any) => state.unit.value);
 
   return (
     <div className="vehicle-container">
@@ -17,10 +17,7 @@ const VehicleDropdown = (props: Props) => {
           </div>
           <div className="select-car">
             <select name="vehicle" id="vehicle">
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
+              <option value="volvo">{currentUnit}</option>
             </select>
           </div>
         </div>
