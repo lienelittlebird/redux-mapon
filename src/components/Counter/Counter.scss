@@ -1,0 +1,32 @@
+@mixin button-color($color: aliceblue) {
+  color: $color;
+  border-color: $color;
+}
+
+%button-styles {
+  background: transparent;
+  @include button-color();
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+
+  &:hover {
+    @include button-color(blue);
+  }
+}
+
+.Counter {
+  h2 {
+    padding-bottom: 0.5rem;
+  }
+
+  .Controls {
+    margin-top: 2rem;
+    width: 40rem;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      @extend %button-styles;
+    }
+  }
+}
