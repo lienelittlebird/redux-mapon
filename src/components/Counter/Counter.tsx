@@ -4,6 +4,7 @@ import {
   decrement,
   incrementByAmount,
   decrementByAmount,
+  multiplyByTwo,
   reset,
 } from "../../state/slices/counterSlice";
 
@@ -47,6 +48,13 @@ const Counter = (props: Props) => {
           }}
         >
           Decrement by 10
+        </button>
+        <button
+          onClick={() => {
+            dispatch(multiplyByTwo());
+          }}
+        >
+          Multiply by 2
         </button>
         <button
           onClick={() => {
