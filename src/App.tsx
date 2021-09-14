@@ -1,14 +1,11 @@
-import Counter from "./components/Counter/Counter";
-import FloatingCounter from "./components/FloatingCounter/FloatingCounter";
-
 import "./App.scss";
+import VehicleDropdown from "./components/VehicleDropdown/VehicleDropdown";
 
 const App: React.FunctionComponent = () => {
   return (
     <div className="App">
-      <h1>React-Redux app</h1>
-      <Counter />
-      <FloatingCounter />
+      <VehicleDropdown/>
+      
     </div>
   );
 };
